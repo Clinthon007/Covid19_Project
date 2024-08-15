@@ -9,4 +9,14 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
 
 ### Tools Used
 
+- EXCEL : was used to sort both data files since they were both contained in one bigger file. Therefore, excel was used to split these files to be individual files inorder to work on.
+- MS SQL : was used to query the data inorder to get the appropriate information needed.
+- TABLEAU Public: was used for final visualizations of the problem statements as concerned to me.
+
+### Data Cleaning/Preparation
+ The following tasks were carried out;
+ - Data Loading and inspection in EXCEL
+ - Spliting of the whole data into two(2) different files for CovidDeaths and CovidVaccinations respectively. This was done because both files were contained in a single file to be used in SQL for data extractions.
+
+### Exploratory Data Analysis
 
