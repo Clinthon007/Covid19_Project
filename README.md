@@ -20,3 +20,12 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
 
 ### Exploratory Data Analysis
 
+EDA involved the Covid19 data to answer some key questions, such as;
+
+i. What are the **Total Cases** (Global Numbers)?
+
+ii. What are the **Total Death Counts Per Continent**?
+
+iii. What is the **Percentage Population Infected Per Country**?
+
+iv. What is the **Average Infected Population Percentage**?
