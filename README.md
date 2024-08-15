@@ -29,3 +29,5 @@ ii. What are the **Total Death Counts Per Continent**?
 iii. What is the **Percentage Population Infected Per Country**?
 
 iv. What is the **Average Infected Population Percentage**?
+
+### Data Analysis
