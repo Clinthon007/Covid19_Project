@@ -296,6 +296,7 @@ The forecast shows a continued rise in infection rates, with the US potentially 
 
 Both countries are forecasted to see a more gradual increase in infection rates. By the end of the forecast period, Mexico may reach around 5%, while India might approach 2%.
 
+---
 
 ### Recommendations
 
