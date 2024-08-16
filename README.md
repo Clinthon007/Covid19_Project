@@ -81,7 +81,7 @@ WHERE
 GROUP BY continent
 ORDER BY Total_Death_Count DESC;
 ```
-![Death_Per_Continent](https://github.com/user-attachments/assets/f3dad836-23fc-4ae6-afe0-742d779ad4c1)
+![Death_Per_Continent](https://github.com/user-attachments/assets/660d52db-a867-4b2b-950d-2eb68d2ec5d0)
 
 - **Europe:**
 
