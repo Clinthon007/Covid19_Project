@@ -281,6 +281,7 @@ The **United States** and the **United Kingdom** experienced significant increas
 
 Mexico and India had lower infection rates compared to the US and UK, with a more gradual increase in the percentage of the population infected. Factors such as differences in population density, public health responses, and testing capacity could contribute to these trends.
 
+
 ### Results/Findings
 
 The following were dully observed from the analysis results;
@@ -294,6 +295,7 @@ The forecast shows a continued rise in infection rates, with the US potentially 
    - **Mexico and India:**
 
 Both countries are forecasted to see a more gradual increase in infection rates. By the end of the forecast period, Mexico may reach around 5%, while India might approach 2%.
+
 
 ### Recommendations
 
