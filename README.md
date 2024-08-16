@@ -124,3 +124,95 @@ Oceania has the lowest death count, which is likely due to its geographic isolat
 The distribution of deaths per continent highlights the varying impact of COVID-19 across the globe. Europe and North America have borne the brunt of the pandemic in terms of total deaths, likely due to earlier and more widespread outbreaks, older populations, and differing public health responses. In contrast, Africa and Oceania have reported significantly lower death tolls, although factors like underreporting, younger populations, and geographical advantages may contribute to these lower figures. This data underscores the importance of context in understanding the global impact of the pandemic, as local factors such as healthcare capacity, government response, and population demographics play crucial roles in the outcomes observed.
 
 ---
+
+iii. **Percentage Population Infected Per Country**
+
+```SQL
+SELECT 
+      location,
+      Population, 
+   MAX(total_cases) AS Highest_Infection_Count, 
+   MAX(total_cases / Population)*100 AS Percentage_Population_Infected
+FROM 
+    Covid_Deaths
+--WHERE location = 'United States'
+GROUP BY location, Population
+ORDER BY Percentage_Population_Infected desc;
+```
+
+![%_Infected_Population_Per_Country](https://github.com/user-attachments/assets/84497767-120f-4da9-a150-19ab56cb8fb4)
+
+- **United States:**
+
+**Infected Percentage: 9.77%**
+
+The United States shows one of the highest percentages of infection relative to its population, reflecting the significant spread of the virus across the country.
+
+- **South America:**
+
+Brazil: 6.90%
+
+Argentina: 6.59%
+
+Paraguay: 3.91%
+
+South America, particularly Brazil and Argentina, have high infection percentages, indicating widespread transmission in these regions.
+
+- **Europe:**
+
+United Kingdom: 6.53%
+
+Sweden: 8.64%
+
+Lithuania: 8.05%
+
+Bosnia and Herzegovina: 2.62%
+
+Europe has varying infection percentages, with some countries like Sweden and Lithuania experiencing higher rates of infection.
+
+- **Asia:**
+
+Kazakhstan: 2.00%
+
+Afghanistan: 1.09%
+
+United Arab Emirates: 2.26%
+
+Infection rates in Asian countries vary, with some regions like the UAE showing moderate percentages.
+
+- **Africa:**
+
+South Africa: 2.67%
+   
+Namibia: 1.90%
+   
+Nigeria: 0.09%
+   
+ Egypt: 0.03%
+
+Africa generally has lower infection percentages, though South Africa is a notable exception with a higher rate compared to other countries on the continent.
+
+- **Oceania:**
+
+Australia and New Zealand are not clearly marked, but given Oceania's overall low case numbers historically, it is likely that their percentages are very low or unmarked.
+
+**Analysis:**
+
+- **High-Infection Regions:**
+
+The United States, parts of Europe (e.g., Sweden, Lithuania), and South America (e.g., Brazil, Argentina) have some of the highest infection rates relative to their populations. This could be due to various 
+factors such as higher population density, more extensive testing and reporting, and earlier or more widespread outbreaks.
+
+- **Moderate-Infection Regions:**
+
+Countries like South Africa, Kazakhstan, and some Middle Eastern nations have moderate infection rates. These figures suggest significant but somewhat contained spread, possibly influenced by effective public health measures or less dense populations.
+
+- **Low-Infection Regions:**
+
+Many African countries, as well as some Asian nations, show very low infection percentages. This could be due to a combination of factors, including underreporting, less testing, younger populations, or 
+geographic advantages that limited the spread of the virus.
+
+---
+
+
+
