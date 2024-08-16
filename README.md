@@ -9,9 +9,11 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
 
 ### Tools Used
 
-- EXCEL : was used to sort both data files since they were both contained in one bigger file. Therefore, excel was used to split these files to be individual files inorder to work on.
-- MS SQL : was used to query the data inorder to get the appropriate information needed.
-- TABLEAU Public: was used for final visualizations of the problem statements as concerned to me.
+- **EXCEL** : was used to sort both data files since they were both contained in one bigger file. Therefore, excel was used to split these files to be individual files inorder to work on.
+
+- **MS SQL** : was used to query the table inorder to get the appropriate information needed.
+  
+- **TABLEAU Public**: was used for final visualizations of the problem statements as concerned to me.
 
 ### Data Cleaning/Preparation
  The following tasks were carried out;
@@ -22,33 +24,30 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
 
 EDA involved the Covid19 data to answer some key questions, such as;
 
-i. What are the **Total Cases Vs Total Deaths** (Global Numbers)?
+i. What are the Overall Cases Globally? (Global Numbers)?
 
 ii. What are the **Total Death Counts Per Continent**?
 
 iii. What is the **Percentage Population Infected Per Country**?
 
-iv. What is the **Average Infected Population Percentage**?
+iv. What is the **Average Infected Population Percentage Overtime**?
 
 ### Data Analysis
 
-i. **Total Cases Vs Total Deaths**
+I. **Global Numbers**
 
    - Looking At Total Cases Vs Total Deaths Globally
    - Shows the likelihood of dying if it's contracted.
 
    ```SQL
 SELECT 
-      location,
-	  date, 
-	  total_cases, 
-	  total_deaths, 
-	  (CONVERT(FLOAT, total_deaths) / NULLIF(CONVERT(FLOAT, total_cases),0))*100 AS Death_Percentage
+      SUM(new_cases) AS total_cases,
+      SUM(CAST(new_deaths AS INT)) AS total_deaths,
+      SUM(CAST(new_deaths AS INT)) / SUM(New_Cases) * 100 AS Death_Percentage
 FROM 
     Covid_Deaths
 WHERE
-     location like '%states%'
-AND continent IS NOT NULL
+     continent IS NOT NULL
 ORDER BY 1,2;
    ```
 ![Total_Deaths_Globally](https://github.com/user-attachments/assets/c514534d-83b0-495f-989d-14af82649b2d)
@@ -68,7 +67,7 @@ While this percentage is significant, it is important to note that it varies by 
 
 ---
 
-ii. **Total Death Counts Per Continent**
+II. **Total Death Counts Per Continent**
 
 ```SQL
 SELECT
@@ -125,7 +124,7 @@ The distribution of deaths per continent highlights the varying impact of COVID-
 
 ---
 
-iii. **Percentage Population Infected Per Country**
+III. **Percentage Population Infected Per Country**
 
 ```SQL
 SELECT 
@@ -188,7 +187,7 @@ Namibia: 1.90%
    
 Nigeria: 0.09%
    
- Egypt: 0.03%
+Egypt: 0.03%
 
 Africa generally has lower infection percentages, though South Africa is a notable exception with a higher rate compared to other countries on the continent.
 
@@ -214,5 +213,97 @@ geographic advantages that limited the spread of the virus.
 
 ---
 
+IV. **Average Infected Population Percentage Overtime**
 
+```SQL
+SELECT 
+      location,
+      date, 
+      total_cases, 
+      Population, 
+     (total_cases / Population)*100 AS Percentage_Population_Infected
+FROM 
+    Covid_Deaths
+--WHERE location = 'United States'
+ORDER BY 1,2;
+```
+![Avg_Population_Infected](https://github.com/user-attachments/assets/009ab290-6b7c-4410-a0eb-cff3ee7d4f57)
 
+**Key Observations:**
+
+- **United States:**
+
+_March 2020 to March 2021:_
+
+The percentage of the population infected increased steadily, reaching about 8.93% by March 2021.
+
+_March 2021 to September 2021:_
+
+The infection rate surged, reaching 19.11% by September 2021, indicating a significant increase in the spread of the virus during this period.
+
+- **United Kingdom:**
+
+_March 2020 to March 2021:_
+
+Similar to the United States, the UK saw a steady increase, with around 6.31% of the population infected by March 2021.
+
+_March 2021 to September 2021:_
+
+The infection rate continued to rise, reaching 14.93% by September 2021, although at a slightly slower pace compared to the United States.
+
+- **Mexico:**
+
+_March 2020 to March 2021:_
+
+The infection rate was relatively low but showed a gradual increase, reaching 1.68% by March 2021.
+
+_March 2021 to September 2021:_
+
+The rate increased to 3.32% by September 2021, indicating a moderate spread of the virus compared to the US and UK.
+
+- **India:**
+
+_March 2020 to March 2021:_
+
+The infection rate in India remained relatively low, with 0.84% of the population infected by March 2021.
+
+_March 2021 to September 2021:_
+
+The rate increased to 1.27% by September 2021, reflecting a slower spread compared to the other countries analyzed.
+
+**Analysis:**
+
+   - Sharp Increases in the US and UK:
+
+The **United States** and the **United Kingdom** experienced significant increases in the percentage of their populations infected, especially between March and September 2021. This could be due to the spread of more contagious variants of the virus, changes in public health measures, or increased testing and reporting.
+
+   - Slower Spread in Mexico and India:
+
+Mexico and India had lower infection rates compared to the US and UK, with a more gradual increase in the percentage of the population infected. Factors such as differences in population density, public health responses, and testing capacity could contribute to these trends.
+
+### Results/Findings
+
+The following were dully observed from the analysis results;
+
+This data underscores the importance of context in understanding the global impact of the pandemic, as local factors such as healthcare capacity, government response, and population demographics play crucial roles in the outcomes observed.
+
+   - **United States and United Kingdom:**
+
+The forecast shows a continued rise in infection rates, with the US potentially reaching over 25% and the UK approaching 20% if current trends continue. The shaded regions indicate a range of possible outcomes, with the potential for the actual rate to be slightly lower or higher.
+
+   - **Mexico and India:**
+
+Both countries are forecasted to see a more gradual increase in infection rates. By the end of the forecast period, Mexico may reach around 5%, while India might approach 2%.
+
+### Recommendations
+
+ Strengthen Vaccination Campaigns:
+Target High-Infection Regions: The United States and the United Kingdom show rapidly increasing infection rates. Intensifying vaccination efforts in these areas, especially targeting unvaccinated populations and vulnerable groups, could help curb the spread.
+Boosters and New Variants: As new variants emerge, it may be necessary to roll out booster shots or vaccines specifically targeting these variants to maintain immunity levels and prevent a resurgence of cases.
+2. Implement and Maintain Public Health Measures:
+Localized Restrictions: In areas with rising infection rates, such as the US and UK, reintroducing or maintaining public health measures like mask mandates, social distancing, and limits on large gatherings could slow the spread. These measures should be adjusted based on real-time data and infection rates.
+Targeted Interventions: Focus on high-risk settings such as schools, workplaces, and public transport by implementing regular testing, improving ventilation, and ensuring compliance with health guidelines.
+3. Increase Global Collaboration and Support:
+Support Lower-Infection Countries: Countries like Mexico and India are seeing slower increases in infection rates. Providing these countries with the resources needed for robust testing, contact tracing, and vaccination can help prevent a sharp rise in cases.
+Share Data and Best Practices: Encourage global sharing of data, including the effectiveness of interventions and vaccine responses to new variants, to ensure that countries can learn from each other’s experiences and respond more effectively.
+By combining these strategies, governments and health authorities can more effectively manage and reduce the spread of COVID-19, preventing further increases in infection rates and mitigating the impact of future outbreaks.
