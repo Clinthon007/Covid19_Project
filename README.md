@@ -3,6 +3,20 @@
 ## OVERVIEW
 This is a covid19 analysis projected to look into its cases, people vaccinated, people infected and countries infected, as well as people killed within that year, using _United States_ as case study.
 
+## Table Of Contents
+
+[Tools Used](#tools-used)
+
+[Data Cleaning](#data-preparation)
+
+[Exploratory Data Analysis](#exploratory-data-analysis)
+
+[Data Analysis](#data-analysis)
+
+[Findings](#findings)
+
+[Recommendations](#recommendations)
+
 ---
 ### Data Source
 The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/CovidDeaths.xlsx) and 'CovidVaccinations.xlsx' [CovidVaccinations](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/CovidVaccinations.xlsx) files
@@ -31,7 +45,7 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
 
 
 
-### Data Cleaning/Preparation
+### Data Preparation
  The following tasks were carried out;
  - Data Loading and inspection in EXCEL
  - Spliting of the whole data into two(2) different files for CovidDeaths and CovidVaccinations respectively. This was done because both files were contained in a single file to be used in SQL for data extractions.
@@ -298,7 +312,7 @@ The **United States** and the **United Kingdom** experienced significant increas
 Mexico and India had lower infection rates compared to the US and UK, with a more gradual increase in the percentage of the population infected. Factors such as differences in population density, public health responses, and testing capacity could contribute to these trends.
 
 
-### Results/Findings
+### Findings
 
 The following were dully observed from the analysis results;
 
@@ -315,6 +329,8 @@ Both countries are forecasted to see a more gradual increase in infection rates.
 ---
 
 ### Recommendations
+
+The following points are what I'd recommend be done in order to reduce the widespread of the virus so as to avoid further death increase too;
 
 **1. Strengthen Vaccination Campaigns:**
    
