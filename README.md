@@ -10,10 +10,26 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
 ### Tools Used
 
 - **EXCEL** : was used to sort both data files since they were both contained in one bigger file. Therefore, excel was used to split these files to be individual files inorder to work on.
+    -  [CovidDeaths.xlsx](https://github.com/user-attachments/files/16645019/CovidDeaths.xlsx)  ||  [CovidVaccinations.xlsx](https://github.com/user-attachments/files/16645021/CovidVaccinations.xlsx)
+
+
 
 - **MS SQL** : was used to query the table inorder to get the appropriate information needed.
   
-- **TABLEAU Public**: was used for final visualizations of the problem statements as concerned to me.
+- **TABLEAU Public**: was used for final visualizations of the problem statements as concerned to me. The query outcome were taken to **Excel** to be relooked at, then were saved before being used in **Tableau**. The files are listed below;
+  
+    -  [Tableau Table 1.xlsx](https://github.com/user-attachments/files/16645030/Tableau.Table.1.xlsx)
+    -  [Tableau Table 2.xlsx](https://github.com/user-attachments/files/16645032/Tableau.Table.2.xlsx)
+    -  [Tableau Table 3.xlsx](https://github.com/user-attachments/files/16645033/Tableau.Table.3.xlsx)
+    -  [Tableau Table 4.xlsx](https://github.com/user-attachments/files/16645034/Tableau.Table.4.xlsx)
+
+- [Check_Dashboard_Here](https://public.tableau.com/app/profile/chidera.clinton/viz/Covid19Analysis_17232284196890/Dashboard1)  
+
+
+
+
+
+
 
 ### Data Cleaning/Preparation
  The following tasks were carried out;
