@@ -37,7 +37,7 @@ The datasets used are the 'CovidDeaths.xlsx' [CovidDeaths](https://github.com/Al
     -  [Tableau Table 3.xlsx](https://github.com/user-attachments/files/16645033/Tableau.Table.3.xlsx)
     -  [Tableau Table 4.xlsx](https://github.com/user-attachments/files/16645034/Tableau.Table.4.xlsx)
 
-- [Check_Dashboard_Here](https://public.tableau.com/app/profile/chidera.clinton/viz/Covid19Analysis_17232284196890/Dashboard1)  
+- Check_Dashboard [Here](https://public.tableau.com/app/profile/chidera.clinton/viz/Covid19Analysis_17232284196890/Dashboard1)  
 
 
 
